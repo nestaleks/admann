@@ -63,6 +63,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
 const contactForm = document.querySelector(".contact-form");
 const successToast = document.getElementById("successToast");
+const successToastBackdrop = document.getElementById("successToastBackdrop");
 const successToastClose = document.getElementById("successToastClose");
 let toastTimer;
 
@@ -70,6 +71,8 @@ function showSuccessToast() {
   if (!successToast) return;
   successToast.classList.add("is-visible");
   successToast.setAttribute("aria-hidden", "false");
+  successToastBackdrop?.classList.add("is-visible");
+  successToastBackdrop?.setAttribute("aria-hidden", "false");
   clearTimeout(toastTimer);
   toastTimer = setTimeout(hideSuccessToast, 3800);
 }
@@ -78,6 +81,8 @@ function hideSuccessToast() {
   if (!successToast) return;
   successToast.classList.remove("is-visible");
   successToast.setAttribute("aria-hidden", "true");
+  successToastBackdrop?.classList.remove("is-visible");
+  successToastBackdrop?.setAttribute("aria-hidden", "true");
 }
 
 contactForm?.addEventListener("submit", (event) => {
@@ -91,7 +96,25 @@ contactForm?.addEventListener("submit", (event) => {
 });
 
 successToastClose?.addEventListener("click", hideSuccessToast);
+successToastBackdrop?.addEventListener("click", hideSuccessToast);
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") hideSuccessToast();
 });
+
+const revealTargets = document.querySelectorAll(".hero, .section, .footer");
+revealTargets.forEach((element) => element.classList.add("reveal-on-scroll"));
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.15 });
+
+  revealTargets.forEach((element) => observer.observe(element));
+} else {
+  revealTargets.forEach((element) => element.classList.add("is-visible"));
+}

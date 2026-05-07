@@ -150,13 +150,23 @@
 
     <section id="contact" class="section contact-section">
       <div class="container cta">
-        <div>
+        <div class="cta-intro">
           <div class="contact-label">JETZT STARTEN</div>
           <h2>IHR PROJEKT IN GUTEN HÄNDEN</h2>
           <p>Lassen Sie uns gemeinsam etwas schaffen.</p>
           <div class="contact-data">
-            <p><a href="mailto:info@admann-gruppe.de">info@admann-gruppe.de</a></p>
-            <p><a href="tel:+490000000000">+49 0000 000000</a></p>
+            <p>
+              <a href="mailto:info@admann-gruppe.de">
+                <span class="contact-icon" aria-hidden="true">✉</span>
+                <span>info@admann-gruppe.de</span>
+              </a>
+            </p>
+            <p>
+              <a href="tel:+490000000000">
+                <span class="contact-icon" aria-hidden="true">☎</span>
+                <span>+49 0000 000000</span>
+              </a>
+            </p>
           </div>
         </div>
         <form class="contact-form" action="#" method="post">
@@ -186,6 +196,7 @@
     </div>
   </footer>
 
+  <div class="success-toast-backdrop" id="successToastBackdrop" aria-hidden="true"></div>
   <div class="success-toast" id="successToast" role="status" aria-live="polite" aria-hidden="true">
     <p>Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.</p>
     <button type="button" class="success-toast__close" id="successToastClose" aria-label="Meldung schließen">×</button>
