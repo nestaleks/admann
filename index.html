@@ -7,7 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="header">
@@ -82,25 +83,37 @@
     </section>
 
     <section id="about" class="section about-section">
-      <div class="container about-grid">
-        <div class="about-image"></div>
-        <div>
-          <div class="about-label">ÜBER UNS</div>
-          <h2>QUALITÄT, DIE BLEIBT</h2>
-          <p>Die Admann Gruppe ist ein erfahrenes Bauunternehmen, das sich auf die Sanierung von Wohnungen und das Bauen im Bestand spezialisiert hat. Wir verbinden handwerkliche Präzision mit modernen Lösungen und einem klaren Anspruch an Qualität.</p>
-                    <div class="facts">
-            <div class="fact-item">
-              <img src="./assets/images/icons/quality.svg" alt="">
-              <span>HOHE QUALITÄTSSTANDARDS</span>
-            </div>
-            <div class="fact-item">
-              <img src="./assets/images/icons/people.svg" alt="">
-              <span>ZUVERLÄSSIG & TERMINTREU</span>
-            </div>
-            <div class="fact-item">
-              <img src="./assets/images/icons/builder.svg" alt="">
-              <span>ERFAHRENES TEAM</span>
-            </div>
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image"></div>
+          <div class="about-content">
+            <div class="about-label">ÜBER UNS</div>
+            <h2>QUALITÄT, DIE BLEIBT</h2>
+            <p class="about-lead">Die Admann Gruppe ist ein erfahrenes Bauunternehmen, das sich auf die Sanierung von Wohnungen und das Bauen im Bestand spezialisiert hat. Wir verbinden handwerkliche Präzision mit modernen Lösungen und einem klaren Anspruch an Qualität.</p>
+            <p class="about-standards">Unser Unternehmen arbeitet strikt nach geltenden Normen und internen Qualitätsstandards, damit jedes Projekt sicher, nachvollziehbar und dauerhaft hochwertig umgesetzt wird.</p>
+            <a class="btn btn-ghost about-download" href="./assets/docs/standards.txt" download="Admann-Standards.txt">Standards herunterladen</a>
+          </div>
+        </div>
+        <div class="facts facts--about">
+          <div class="fact-item">
+            <img src="./assets/images/icons/quality.svg" alt="">
+            <span>Hohe Qualitätstandarts</span>
+            <p>Wir arbeiten mit präzisen Prozessen, hochwertigen Materialien und einem klaren Anspruch an nachhaltige Qualität.</p>
+          </div>
+          <div class="fact-item">
+            <img src="./assets/images/icons/people.svg" alt="">
+            <span>Zuverlässig & Termintreu</span>
+            <p>Verbindliche Planung, transparente Kommunikation und saubere Umsetzung sorgen für planbare Ergebnisse.</p>
+          </div>
+          <div class="fact-item">
+            <img src="./assets/images/icons/builder.svg" alt="">
+            <span>Erfahrenes Team</span>
+            <p>Unser eingespieltes Team vereint handwerkliche Erfahrung mit modernen Lösungen für Sanierung und Bestand.</p>
+          </div>
+          <div class="fact-item">
+            <img src="./assets/images/icons/consultation.svg" alt="">
+            <span>Individuelle Beratung</span>
+            <p>Jedes Projekt wird auf Ihre Anforderungen, Ihr Budget und den Zustand des Bestands abgestimmt.</p>
           </div>
         </div>
       </div>
@@ -205,5 +218,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
