@@ -60,3 +60,38 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     history.replaceState(null, "", targetId);
   });
 });
+
+const contactForm = document.querySelector(".contact-form");
+const successToast = document.getElementById("successToast");
+const successToastClose = document.getElementById("successToastClose");
+let toastTimer;
+
+function showSuccessToast() {
+  if (!successToast) return;
+  successToast.classList.add("is-visible");
+  successToast.setAttribute("aria-hidden", "false");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(hideSuccessToast, 3800);
+}
+
+function hideSuccessToast() {
+  if (!successToast) return;
+  successToast.classList.remove("is-visible");
+  successToast.setAttribute("aria-hidden", "true");
+}
+
+contactForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (!contactForm.checkValidity()) {
+    contactForm.reportValidity();
+    return;
+  }
+  contactForm.reset();
+  showSuccessToast();
+});
+
+successToastClose?.addEventListener("click", hideSuccessToast);
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") hideSuccessToast();
+});

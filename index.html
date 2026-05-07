@@ -113,32 +113,32 @@
         <p class="process-lead">Klar strukturiert und transparent – von der ersten Idee bis zur fertigen Umsetzung.</p>
         <div class="process-steps">
           <article class="timeline-item">
-            <img src="./assets/images/icons/quality.svg" alt="">
             <span class="timeline-point">01</span>
+            <img src="./assets/images/icons/quality.svg" alt="">
             <div class="timeline-text">
               <h3>Beratung & Planung</h3>
               <p>Wir hören zu, analysieren und entwickeln die passende Lösung für Ihr Projekt.</p>
             </div>
           </article>
           <article class="timeline-item">
-            <img src="./assets/images/icons/square.svg" alt="">
             <span class="timeline-point">02</span>
+            <img src="./assets/images/icons/square.svg" alt="">
             <div class="timeline-text">
               <h3>Angebot & Abstimmung</h3>
               <p>Sie erhalten ein faires Angebot. Wir stimmen alle Details transparent mit Ihnen ab.</p>
             </div>
           </article>
           <article class="timeline-item">
-            <img src="./assets/images/icons/hammer.svg" alt="">
             <span class="timeline-point">03</span>
+            <img src="./assets/images/icons/hammer.svg" alt="">
             <div class="timeline-text">
               <h3>Umsetzung</h3>
               <p>Unser Team setzt Ihr Projekt professionell, sauber und termingerecht um.</p>
             </div>
           </article>
           <article class="timeline-item">
-            <img src="./assets/images/icons/key.svg" alt="">
             <span class="timeline-point">04</span>
+            <img src="./assets/images/icons/key.svg" alt="">
             <div class="timeline-text">
               <h3>Übergabe</h3>
               <p>Wir übergeben Ihr Projekt fertiggestellt – zu Ihrer vollen Zufriedenheit.</p>
@@ -154,12 +154,26 @@
           <div class="contact-label">JETZT STARTEN</div>
           <h2>IHR PROJEKT IN GUTEN HÄNDEN</h2>
           <p>Lassen Sie uns gemeinsam etwas schaffen.</p>
+          <div class="contact-data">
+            <p><a href="mailto:info@admann-gruppe.de">info@admann-gruppe.de</a></p>
+            <p><a href="tel:+490000000000">+49 0000 000000</a></p>
+          </div>
         </div>
-        <div class="contact-data">
-          <p>info@admann-gruppe.de</p>
-          <p>+49 0000 000000</p>
-        </div>
-        <a class="btn btn-fill" href="#">Projekt anfragen</a>
+        <form class="contact-form" action="#" method="post">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>
+            <span>E-Mail-Adresse</span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            <span>Nachricht</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button class="btn btn-fill" type="submit">Projekt anfragen</button>
+        </form>
       </div>
     </section>
   </main>
@@ -171,6 +185,11 @@
       <div>© <span id="year"></span> Admann Gruppe</div>
     </div>
   </footer>
+
+  <div class="success-toast" id="successToast" role="status" aria-live="polite" aria-hidden="true">
+    <p>Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.</p>
+    <button type="button" class="success-toast__close" id="successToastClose" aria-label="Meldung schließen">×</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
