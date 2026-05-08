@@ -1,13 +1,13 @@
-:root {
-  --bg: #fefefe;
-  --text: #58595b;
-  --black: #000000;
-  --light-gray: #f7f7f7;
-  --medium-gray: #ededed;
-  --gray: #9ca1a7;
-  --muted: #676d74;
-  --line: #e4e4e4;
-  --card: #ebebeb;
+﻿:root {
+  --bg: #FFFDF8;
+  --text: #1B4332;
+  --black: #1B4332;
+  --light-gray: #F4F1EA;
+  --medium-gray: #F4F1EA;
+  --gray: #D9C7A3;
+  --muted: #2D6A4F;
+  --line: #F4F1EA;
+  --card: #F4F1EA;
 }
 
 * { box-sizing: border-box; }
@@ -112,33 +112,12 @@ a { color: inherit; text-decoration: none; }
   background-size: cover, cover;
   background-position: left top, right center;
 }
-.hero-grid {
-  position: relative;
-}
 .hero-content { max-width: 560px; }
 h1 { margin: 0 0 20px; font-size: clamp(38px, 4vw, 58px); line-height: 1.2; letter-spacing: .02em; }
 h2 { margin: 0 0 14px; font-size: clamp(28px, 3vw, 42px); letter-spacing: .02em; }
 h3 { margin: 0 0 10px; font-size: 22px; }
 p { margin: 0; color: var(--muted); line-height: 1.6; font-size: 16px; }
 .hero-actions { margin-top: 28px; display: flex; gap: 14px; }
-.btn-variant {
-  position: absolute;
-  top: 18px;
-  right: 0;
-  background: #ff7a00;
-  border-color: #ff7a00;
-  color: #fff;
-  font-weight: 600;
-}
-.btn-variant:hover {
-  background: #e66e00;
-  border-color: #e66e00;
-  color: #fff;
-}
-.btn-variant:active {
-  background: #cc6200;
-  border-color: #cc6200;
-}
 
 .section { padding: 52px 0; }
 .services-label,
@@ -608,9 +587,6 @@ p { margin: 0; color: var(--muted); line-height: 1.6; font-size: 16px; }
   .hero-content { max-width: 520px; }
   h1 { font-size: clamp(32px, 6.2vw, 46px); }
   .hero-actions { gap: 12px; flex-wrap: wrap; }
-  .btn-variant {
-    top: 14px;
-  }
   .about-image {
     min-height: 0;
     aspect-ratio: 16 / 9;
@@ -711,11 +687,6 @@ p { margin: 0; color: var(--muted); line-height: 1.6; font-size: 16px; }
   .hero-content { max-width: 100%; }
   h1 { font-size: clamp(28px, 8vw, 36px); }
   .hero-actions .btn { padding: 11px 18px; }
-  .btn-variant {
-    top: 10px;
-    right: 0;
-    padding: 10px 16px;
-  }
   .services-cards,
   .facts { grid-template-columns: 1fr; }
   .fact-item { min-height: 0; }
@@ -772,3 +743,4 @@ p { margin: 0; color: var(--muted); line-height: 1.6; font-size: 16px; }
     width: 200px;
   }
 }
+
