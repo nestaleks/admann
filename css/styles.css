@@ -222,6 +222,12 @@ p { margin: 0; color: var(--muted); line-height: 1.6; font-size: 16px; }
 .about-download {
   justify-self: start;
 }
+.about-download-caption {
+  justify-self: start;
+  margin-top: -10px;
+  font-size: 12px;
+  line-height: 1.3;
+}
 .facts {
   margin-top: 4px;
   display: grid;
